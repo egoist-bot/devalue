@@ -26,7 +26,7 @@ describe("devalue", () => {
     test("NaN", NaN, "NaN")
     test("Infinity", Infinity, "Infinity")
     test("RegExp", /regexp/gim, 'new RegExp("regexp", "gim")')
-    test("Date", new Date(1e12), "new Date(1000000000000)")
+    test("Date", new Date(1e12), `new Date("2001-09-09T01:46:40.000Z")`)
     test("Array", ["a", "b", "c"], '["a","b","c"]')
     test("Array (empty)", [], "[]")
     test("Array (sparse)", [, "b", ,], '[,"b",,]')
