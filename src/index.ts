@@ -164,7 +164,7 @@ export default function devalue(value: any) {
           break
 
         case "Date":
-          values.push(`new Date(${thing.getTime()})`)
+          values.push(`new Date(${stringifyString(thing.toISOString())})`)
           break
 
         case "Array":
